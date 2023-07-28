@@ -1,0 +1,13 @@
+from browser import Browser
+from pages.login_page import LoginPage
+
+
+def before_all(context):
+    context.browser = Browser()
+    # va urma instantierea paginilor
+    context.login_page = LoginPage()
+
+
+def after_all(context):
+    context.browser.close()
+print(f'modificare fisier, isi schimba culoare in GitHub')
